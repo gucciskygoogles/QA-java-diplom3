@@ -1,10 +1,10 @@
-package api;
+package org.praktikum.api;
 
 
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import Data.User;
+import org.praktikum.data.User;
 
 
 import static io.restassured.RestAssured.given;

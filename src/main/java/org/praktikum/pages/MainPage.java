@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MainPage extends BasePage {
 
     private final By personalAccountButton = By.linkText("Личный Кабинет");
-    private final By loginInAccountButton = By.xpath("//*[@id=\"root\"]/div/main/section[2]/div/button");
-    private final By makeOrderButton  = By.xpath("//*[@id=\"root\"]/div/main/section[2]/div/button");
-    private final By bunCategory = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[1]/div[1]");
-    private final By sauceCategory = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[1]/div[2]");
-    private final By fillingCategory = By.xpath("//*[@id=\"root\"]/div/main/section[1]/div[1]/div[3]");
+    private final By loginInAccountButton = By.xpath("//button[text()='Войти в аккаунт']");
+    private final By makeOrderButton  = By.xpath("//button[text()='Оформить заказ']");
+    private final By bunCategory = By.xpath("//span[text()='Булки']/parent::div");
+    private final By sauceCategory = By.xpath("//span[text()='Соусы']/parent::div");
+    private final By fillingCategory = By.xpath("//span[text()='Начинки']/parent::div");
 
     public MainPage(WebDriver driver) {
         super(driver);

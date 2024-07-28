@@ -9,7 +9,7 @@ import org.praktikum.pages.MainPage;
 
 public class ConstructorTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
 
     @Before

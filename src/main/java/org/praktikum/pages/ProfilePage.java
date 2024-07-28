@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage extends BasePage{
 
-    private final By nameOfUserField = By.xpath("//*[@id=\"root\"]/div/main/div/div/div/ul/li[1]/div/div/input");
+    private final By nameOfUserField = By.xpath("//input[@name='Name']");
 
-    private final By logPutButton = By.xpath("//*[@id=\"root\"]/div/main/div/nav/ul/li[3]/button");
+    private final By logPutButton = By.xpath("//button[text()='Выход']");
 
     public ProfilePage(WebDriver driver) {
         super(driver);

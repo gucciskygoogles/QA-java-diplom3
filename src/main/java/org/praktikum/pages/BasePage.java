@@ -1,6 +1,7 @@
 package org.praktikum.pages;
 
-import Data.Finals;
+import org.praktikum.data.Finals;
+import org.praktikum.data.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -14,12 +15,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BasePage {
 
     WebDriver driver;
-
+    User user;
     private final By logo = By.xpath("//*[@id=\"root\"]/div/header/nav/div/a");
     private final By constructorButton = By.xpath("//*[@id=\"root\"]/div/header/nav/ul/li[1]/a");
 
     public WebDriver setUpDriver() {
-        String browser = System.getProperty("browser", "yandex");
+        String browser = System.getProperty("browser", "chrome");
 
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
@@ -95,5 +96,6 @@ public class BasePage {
     public String getClassOfCategory(By xpath) {
         return driver.findElement(xpath).getAttribute("class");
     }
+
 
 }

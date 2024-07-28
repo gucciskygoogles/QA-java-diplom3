@@ -1,4 +1,4 @@
-package Data;
+package org.praktikum.data;
 
 public class Finals {
 

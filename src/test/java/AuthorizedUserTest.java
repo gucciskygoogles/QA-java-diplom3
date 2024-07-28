@@ -1,7 +1,7 @@
-import Data.DataCreator;
-import Data.Finals;
-import Data.User;
-import api.UserClient;
+import org.praktikum.data.DataCreator;
+import org.praktikum.data.Finals;
+import org.praktikum.data.User;
+import org.praktikum.api.UserClient;
 import io.qameta.allure.Description;
 
 import io.restassured.RestAssured;
@@ -16,13 +16,14 @@ import org.praktikum.pages.LoginPage;
 import org.praktikum.pages.MainPage;
 import org.praktikum.pages.ProfilePage;
 
+
 import static org.hamcrest.CoreMatchers.equalTo;
 
 public class AuthorizedUserTest {
 
-    WebDriver driver;
-    UserClient userClient;
-    User user;
+    private WebDriver driver;
+    private UserClient userClient;
+    private User user;
     private String token;
 
     @Before
@@ -51,12 +52,13 @@ public class AuthorizedUserTest {
         driver.quit();
     }
 
-    private MainPage loginUser() throws InterruptedException {
+    public MainPage loginUser() throws InterruptedException {
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = mainPage.clickOnLoginInAccountButton();
         loginPage.setDataForLogin(user.getEmail(), user.getPassword());
         return loginPage.clickOnLoginButton();
     }
+
 
     @Test
     @Description("Тест перехода на конструктор с помощью кнопки Конструктор в Хэдере")

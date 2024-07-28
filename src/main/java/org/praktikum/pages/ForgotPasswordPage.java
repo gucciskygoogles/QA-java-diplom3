@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ForgotPasswordPage extends BasePage {
-    private final By loginLink = By.xpath("//*[@id=\"root\"]/div/main/div/div/p/a");
+    private final By loginLink = By.xpath("//a[@href='/login']");
 
     public ForgotPasswordPage(WebDriver driver) {
         super(driver);

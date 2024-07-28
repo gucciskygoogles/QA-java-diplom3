@@ -1,7 +1,7 @@
-import Data.DataCreator;
-import Data.Finals;
-import Data.User;
-import api.UserClient;
+import org.praktikum.data.DataCreator;
+import org.praktikum.data.Finals;
+import org.praktikum.data.User;
+import org.praktikum.api.UserClient;
 import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -16,9 +16,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 public class LoginTest {
 
-    WebDriver driver;
-    UserClient userClient;
-    User user;
+    private WebDriver driver;
+    private UserClient userClient;
+    private User user;
     private String token;
 
     @Before
@@ -47,12 +47,13 @@ public class LoginTest {
         driver.quit();
     }
 
-    private MainPage loginUser() throws InterruptedException {
+    public MainPage loginUser() throws InterruptedException {
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = mainPage.clickOnLoginInAccountButton();
         loginPage.setDataForLogin(user.getEmail(), user.getPassword());
         return loginPage.clickOnLoginButton();
     }
+
 
     @Test
     @Description("Тест логина с кнопкой Войти в аккаунт")

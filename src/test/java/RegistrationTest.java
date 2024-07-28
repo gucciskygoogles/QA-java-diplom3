@@ -5,12 +5,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.praktikum.pages.*;
-import tools.Tools;
+import org.praktikum.tools.Tools;
 
 
 public class RegistrationTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
 
     @Before

@@ -1,8 +1,8 @@
-package Data;
+package org.praktikum.data;
 
 
 import io.qameta.allure.Step;
-import tools.Tools;
+import org.praktikum.tools.Tools;
 
 
 public class DataCreator {

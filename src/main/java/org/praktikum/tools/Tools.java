@@ -1,4 +1,4 @@
-package tools;
+package org.praktikum.tools;
 
 import java.security.SecureRandom;
 

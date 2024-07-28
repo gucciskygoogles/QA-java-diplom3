@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage{
 
-    private final By emailField = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[1]/div/div/input");
-    private final By passwordField = By.xpath("//*[@id=\"root\"]/div/main/div/form/fieldset[2]/div/div/input");
-    private final By loginButton = By.xpath("//*[@id=\"root\"]/div/main/div/form/button");
+    private final By emailField = By.xpath("//input[@name='name']");
+    private final By passwordField = By.xpath("//input[@name='Пароль']");
+    private final By loginButton = By.xpath("//button[text()='Войти']");
     private final By goToRegistrationPageLink = By.linkText("Зарегистрироваться");
-    private final By forgotPasswordLink = By.xpath("//*[@id=\"root\"]/div/main/div/div/p[2]/a");
+    private final By forgotPasswordLink = By.xpath("//a[@href='/forgot-password']");
 
 
     public LoginPage(WebDriver driver) {
