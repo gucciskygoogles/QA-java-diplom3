@@ -14,8 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-    private WebDriver driver;
-    private User user;
+    public WebDriver driver;
+    public User user;
     private final By logo = By.xpath("//div[@class='AppHeader_header__logo__2D0X2']");
     private final By constructorButton = By.xpath("//p[text()='Конструктор']");
 
