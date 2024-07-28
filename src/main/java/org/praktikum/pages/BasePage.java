@@ -16,8 +16,8 @@ public class BasePage {
 
     WebDriver driver;
     User user;
-    private final By logo = By.xpath("//*[@id=\"root\"]/div/header/nav/div/a");
-    private final By constructorButton = By.xpath("//*[@id=\"root\"]/div/header/nav/ul/li[1]/a");
+    private final By logo = By.xpath("//div[@class='AppHeader_header__logo__2D0X2']");
+    private final By constructorButton = By.xpath("//p[text()='Конструктор']");
 
     public WebDriver setUpDriver() {
         String browser = System.getProperty("browser", "chrome");
